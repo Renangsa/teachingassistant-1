@@ -1,3 +1,4 @@
+<html (mouseout)="onMove()">
 <h1>
   Teaching Assistant
 </h1>
@@ -18,6 +19,9 @@
 <tr>
    <td><label>e-mail </label></td>
    <td><input [(ngModel)]="aluno.email" ></td>
+   <td *ngIf="cpfduplicado">
+      Já existe um aluno com esse CPF
+   </td>
 </tr>
 <tr>
    <td><label>Login GitHub </label></td>
@@ -34,3 +38,4 @@
        <span>{{a.loginGithub}}</span>
    </li>
 </ul>
+</html>
